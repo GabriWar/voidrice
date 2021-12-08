@@ -1,6 +1,8 @@
-# Luke's lf settings
+#Gabriwar's lf settings
 
 # Basic vars
+set hidden true
+set drawbox true
 set shell bash
 set shellopts '-eu'
 set ifs "\n"
