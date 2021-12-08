@@ -21,7 +21,7 @@
     timeout = 5
 
 [urgency_critical]
-    background = "#1cc24d"
-    foreground = "#ebdbb2"
-    frame_color = "#fabd2f"
+    background = "#1d2021"
+    foreground = "#928374"
+    frame_color = "#ff0000"
     timeout = 10
