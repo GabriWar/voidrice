@@ -6,7 +6,7 @@
     offset = 0x19
     padding = 2
     horizontal_padding = 2
-    transparency = 40
+    transparency = 25
     font = Monospace 12
     format = "<b>%s</b>\n%b"
 
@@ -16,8 +16,8 @@
     timeout = 3
 
 [urgency_normal]
-    foreground = "#ebdbb2"
-    background = "#458588"
+    background = "#1d2021"
+    foreground = "#928374"
     timeout = 5
 
 [urgency_critical]
