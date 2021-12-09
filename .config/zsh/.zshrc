@@ -85,9 +85,15 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
-source ~/.config/zsh/rkj.zsh-theme
 alias ls="exa -a --icons"
 alias ls -la="exa -la --icons"
+
+
+#set PS1 line
+PROMPT=$'%{\e[0;34m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]%b%{\e[0m%} - %b%{\e[0;34m%}%B[%b%{\e[1;37m%}%~%{\e[0;34m%}%B]%b%{\e[0m%} - %{\e[0;34m%}%B[%b%{\e[0;33m%}'%D{"%Y-%m-%d %I:%M:%S"}%b$'%{\e[0;34m%}%B]%b%{\e[0m%}
+%{\e[0;34m%}%B└─%B[%{\e[1;35m%}%?%{\e[0;34m%}%B]%{\e[0m%}%b '
+
+
 
 (cat ~/.cache/wal/sequences &)
 
