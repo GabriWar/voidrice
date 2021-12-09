@@ -15,4 +15,5 @@ else
 fi
 
 wal -R
+picom --experimental-backends &
 ssh-agent dwm
