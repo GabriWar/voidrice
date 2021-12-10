@@ -1,0 +1,47 @@
+     _                    
+  __| |_      ___ __ ___  
+ / _` \ \ /\ / / '_ ` _ \ 
+| (_| |\ V  V /| | | | | |
+ \__,_| \_/\_/ |_| |_| |_|
+
+super key shortcuts
+shift '           =      emojipicker
+
+1-9               =      go to different workspaces (tags)
+shift 1-9         =      move active windows to different workspaces (tags)
+
+0                 =      show all tags
+shift 0           =      move window on all tags
+
++                 =      increment volume by1 5
+shift +           =      increment volume by 15
+
++                 =      decrement volume by 5
+shift +           =      decrement volume by 15
+
+backspace         =      close active window
+shift backspace   =      close active window
+Q                 =      close active window
+
+
+W                 =      open libre office (can be setted on ~/.config/shell/profile)
+E                 =      open an terminal (can be setted on ~/.local/src/dwm/config.h)
+R                 =      open lf file manager (can be setted on ~/.local/src/dwm/config.h)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
