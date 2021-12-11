@@ -14,8 +14,11 @@ else
 	. "$HOME/.xprofile"
 fi
 
-
-light -N 1
+#sets backlight limit
+light -N 1 
+#recovers last used wallpaper
 wal -R
+#starts compositor
 picom --experimental-backends &
+#starts window manager
 ssh-agent dwm
