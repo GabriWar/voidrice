@@ -37,7 +37,7 @@ zle -N history-beginning-search-forward-end history-search-end
 ### Set variables
 #################
 PATH="/usr/local/bin:/usr/local/sbin/:$PATH"
-HISTFILE=$HOME/.zhistory
+HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 HISTSIZE=1000
 SAVEHIST=1000
 LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
@@ -169,9 +169,9 @@ mcd () {
 #############
 autoload -U compinit
 compinit
-bindkey -s '^o' 'lfcd\n'
-bindkey -s '^a' 'bc -lq\n'
-bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+bindkey -s '^o' '^ulfcd\n'
+bindkey -s '^a' '^ubc -lq\n'
+bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
 bindkey '^[[P' delete-char
 bindkey "^[[H" beginning-of-line
 bindkey "^[[4~" end-of-line
@@ -272,7 +272,8 @@ zstyle '*' single-ignored show
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
-    tmp="$(mktemp)"
+    tmp="$(mktemp -uq)"
+    trap 'rm -f $tmp >/dev/null 2>&1' HUP INT QUIT TERM PWR EXIT
     lf -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
