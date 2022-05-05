@@ -362,3 +362,4 @@ alias ls -la="exa -la --icons"
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 clear
 cal -3
+export LC_ALL=en_US.UTF-8
