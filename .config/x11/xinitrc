@@ -19,6 +19,6 @@ light -N 1
 #recovers last used wallpaper
 wal -R
 #starts compositor
-picom --experimental-backends &
+picom &
 #starts window manager
 ssh-agent dwm
