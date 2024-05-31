@@ -1,4 +1,3 @@
-
 ### Set/unset ZSH options
 #########################
 # setopt NOHUP
@@ -167,7 +166,7 @@ mcd () {
 
 ### Bind keys
 #############
-autoload -U compinit
+autoload -U compinit 
 compinit
 bindkey -s '^o' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
@@ -355,14 +354,14 @@ alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias grep='grep --color=auto'
 alias ls="exa -a --icons"
 alias ls -la="exa -la --icons"
-
+alias gh copilot "cope"
 ########################################################################################################################################################################################################
+clear
 (cat ~/.cache/wal/sequences &)
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 clear
 cal -3
 export LC_ALL=en_US.UTF-8
-#export DISPLAY=$(ip route list default | awk '{print $3}'):0
-#export LIBGL_ALWAYS_INDIRECT=1
-#uncomment if on wsl (windows)
+export DISPLAY=$(ip route list default | awk '{print $3}'):0
+export LIBGL_ALWAYS_INDIRECT=1
