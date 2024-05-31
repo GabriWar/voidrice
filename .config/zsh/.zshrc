@@ -363,3 +363,5 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 clear
 cal -3
 export LC_ALL=en_US.UTF-8
+#export DISPLAY=localhost:0.0
+#uncomment if on wsl (windows)
